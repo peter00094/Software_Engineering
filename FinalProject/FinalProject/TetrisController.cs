@@ -30,7 +30,7 @@ namespace FinalProject
         // let game start
         public void start()
         {
-            
+            tm.setState(tm.IdleState);
         }
     }
 }
