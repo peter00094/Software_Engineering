@@ -43,6 +43,7 @@ namespace FinalProject
             if (nowBlock != null && nowBlock.GetBlocksType() != "O")
             {
                 Point center = ConvertIndexToPoint(nowBlock.GetCenter().Name);
+                PictureBox[,] AllBlocks = tv.GetAllBlocks();
                 Point[] AllBlocksIndex = nowBlock.GetAllCubesPosition();
                 PictureBox[] AllBlocksPosition = nowBlock.GetAllCubes();
                 System.Drawing.Color nowColor = AllBlocksPosition[0].BackColor;
@@ -56,6 +57,10 @@ namespace FinalProject
                         // if result calculated is out of range then throw exception
                         if (center.Getx() - x < 0 || center.Getx() - x > 8 || center.Gety() + y < 0 || center.Gety() + y > 12)
                         {
+                            throw new Exception();
+                        }
+                        // if result calculated is offensing other blocks then throw exception
+                        if (AllBlocks[center.Gety() + y, center.Getx() - x].BackColor != panelOnShow.BackColor && !AllBlocksPosition.Contains<PictureBox>(AllBlocks[center.Gety() + y, center.Getx() - x])) {
                             throw new Exception();
                         }
                     }
@@ -162,7 +167,8 @@ namespace FinalProject
 
                         int y = nowBlockIndex[i].Gety();
                         // to avoid to touch the existed block
-                        if (allBlocks[y, x + 1].BackColor != panelOnShow.BackColor && allBlocks[y, x + 1].BackColor != allBlocks[y, x].BackColor && !nowBlockPosition.Contains<PictureBox>(allBlocks[y, x + 1]))
+                        //if (allBlocks[y, x + 1].BackColor != panelOnShow.BackColor && allBlocks[y, x + 1].BackColor != allBlocks[y, x].BackColor && !nowBlockPosition.Contains<PictureBox>(allBlocks[y, x + 1]))
+                        if (allBlocks[y, x + 1].BackColor != panelOnShow.BackColor && !nowBlockPosition.Contains<PictureBox>(allBlocks[y, x + 1]))
                         {
                             throw new Exception();
                         }
