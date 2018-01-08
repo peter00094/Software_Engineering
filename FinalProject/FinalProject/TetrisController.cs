@@ -38,7 +38,7 @@ namespace FinalProject
                     }
                     catch (Exception e)
                     {
-                        System.Console.Write(e.GetType());
+                        Console.WriteLine(e.GetType()+": Move left");
                     }
                 tm.setState(tm.IdleState);
                 }
@@ -51,7 +51,7 @@ namespace FinalProject
                     }
                     catch (Exception e)
                     {
-                        System.Console.Write(e.GetType());
+                        Console.WriteLine(e.GetType()+": Move right");
                     }
                     tm.setState(tm.IdleState);
                 }
@@ -64,7 +64,7 @@ namespace FinalProject
                     }
                     catch(Exception e)
                     {
-                        System.Console.Write(e.GetType());
+                        Console.WriteLine(e.GetType()+": Rotate");
                     }
                     tm.setState(tm.IdleState);
                 }
@@ -77,8 +77,9 @@ namespace FinalProject
                     }
                     catch (Exception e)
                     {
-                        System.Console.Write(e.GetType());
+                        Console.WriteLine(e.GetType()+": Dropdown fast");
                     }
+                    tm.RemoveLine(tv.GetAllBlocks());
                     tm.setState(tm.IdleState);
                 }
                 else if (userInput == MoveDownSlowCommand)
@@ -90,8 +91,9 @@ namespace FinalProject
                     }
                     catch (Exception e)
                     {
-                        System.Console.Write(e.GetType());
+                        Console.WriteLine(e.GetType()+": Dropdown slow");
                     }
+                    tm.RemoveLine(tv.GetAllBlocks());
                     tm.setState(tm.IdleState);
                 }
             }
