@@ -193,6 +193,7 @@ namespace FinalProject
         // move the block down slow
         public void DropDownSlow(Blocks nowBlock, PictureBox[,] allBlocks)
         {
+            
             if (nowBlock != null)
             {
                 Point[] nowBlockIndex = nowBlock.GetAllCubesPosition();
