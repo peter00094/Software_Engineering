@@ -20,3 +20,4 @@ C:\Users\Bryant\Desktop\Software_Engineering\FinalProject\FinalProject\obj\Debug
 C:\Users\Bryant\Desktop\Software_Engineering\FinalProject\FinalProject\obj\Debug\FinalProject.csproj.CoreCompileInputs.cache
 C:\Users\Bryant\Desktop\Software_Engineering\FinalProject\FinalProject\obj\Debug\FinalProject.exe
 C:\Users\Bryant\Desktop\Software_Engineering\FinalProject\FinalProject\obj\Debug\FinalProject.pdb
+C:\Users\Bryant\Desktop\Software_Engineering\FinalProject\FinalProject\obj\Debug\FinalProject.B10415039_view.resources

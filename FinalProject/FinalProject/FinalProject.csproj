@@ -66,6 +66,9 @@
     <Compile Include="B10415016_view.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="B10415039_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Blocks.cs" />
     <Compile Include="BlockShape.cs" />
     <Compile Include="NonSelectableButton.cs">
@@ -84,6 +87,9 @@
     </Compile>
     <EmbeddedResource Include="B10415016_view.resx">
       <DependentUpon>B10415016_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B10415039_view.resx">
+      <DependentUpon>B10415039_view.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
