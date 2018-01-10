@@ -29,12 +29,12 @@ namespace FinalProject
         //reutrn now state
         public string getState()
         {
-
+            return this.nowState;
         }
         //set the now state to the argument, and inform controller state changed
         public void setState(string newState)
         {
-
+            this.nowState = newState;
         }
         // rotate the block
         public void Rotate(Blocks nowBlock, PictureBox[,] allBlocks)
@@ -207,7 +207,7 @@ namespace FinalProject
         public bool GameOver()
         {
             // if game is over, then return true, whereas return false
-            
+            return false;
         }
         // set shape of block
         public Blocks SetShape(PictureBox[] CubesNeeded, string type)

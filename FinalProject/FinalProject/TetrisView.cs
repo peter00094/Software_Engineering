@@ -74,7 +74,7 @@ namespace FinalProject
         // be inform the state is changed, then modify the model to new model
         public void stateHasChanged(TetrisModel model)
         {
-
+            tm = model;
         }
         // inform whether game is finished
         public bool finish()
